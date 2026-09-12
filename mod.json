@@ -1,0 +1,111 @@
+{
+    "geode": ">=v5.0.0",
+    "gd": {
+        "win": "2.2081"
+    },
+    "id": "com.axion.frame-perfect-counter",
+    "name": "Frame Perfect Counter",
+    "version": "v1.0.0",
+    "developer": "Axion99Error",
+    "description": "Displays physics frame timing and input accuracy. Practice/debug only.",
+    "settings": {
+        "enabled": {
+            "type": "bool",
+            "name": "Enable Overlay",
+            "description": "Toggles the overlay display",
+            "default": true
+        },
+        "show-frame-counter": {
+            "type": "bool",
+            "name": "Show Frame Counter",
+            "description": "Display current physics frame",
+            "default": true
+        },
+        "show-input-logging": {
+            "type": "bool",
+            "name": "Show Input History",
+            "description": "Display last 20 inputs",
+            "default": false
+        },
+        "overlay-x": {
+            "type": "float",
+            "name": "Overlay X Position",
+            "description": "Horizontal position (0.0-1.0)",
+            "default": 0.02,
+            "min": 0.0,
+            "max": 1.0,
+            "control": "slider"
+        },
+        "overlay-y": {
+            "type": "float",
+            "name": "Overlay Y Position",
+            "description": "Vertical position (0.0-1.0)",
+            "default": 0.95,
+            "min": 0.0,
+            "max": 1.0,
+            "control": "slider"
+        },
+        "overlay-scale": {
+            "type": "float",
+            "name": "Overlay Scale",
+            "description": "Text scale multiplier",
+            "default": 0.5,
+            "min": 0.2,
+            "max": 2.0,
+            "control": "slider"
+        },
+        "perfect-window": {
+            "type": "int",
+            "name": "Perfect Window",
+            "description": "Frames of tolerance for PERFECT (±N)",
+            "default": 1,
+            "min": 0,
+            "max": 5,
+            "control": "arrows"
+        },
+        "target-frame": {
+            "type": "int",
+            "name": "Target Frame",
+            "description": "Physics frame to aim for",
+            "default": 0,
+            "min": 0,
+            "max": 100000
+        },
+        "show-player-1": {
+            "type": "bool",
+            "name": "Show Player 1",
+            "description": "Track Player 1 inputs",
+            "default": true
+        },
+        "show-player-2": {
+            "type": "bool",
+            "name": "Show Player 2",
+            "description": "Track Player 2 inputs (dual mode)",
+            "default": true
+        },
+        "text-color": {
+            "type": "color",
+            "name": "Text Color",
+            "description": "Overlay text color",
+            "default": "#ffffff"
+        },
+        "perfect-color": {
+            "type": "color",
+            "name": "PERFECT Color",
+            "description": "Color for PERFECT result",
+            "default": "#00ff00"
+        },
+        "early-color": {
+            "type": "color",
+            "name": "EARLY Color",
+            "description": "Color for EARLY result",
+            "default": "#ffff00"
+        },
+        "late-color": {
+            "type": "color",
+            "name": "LATE Color",
+            "description": "Color for LATE result",
+            "default": "#ff4444"
+        }
+    }
+}
