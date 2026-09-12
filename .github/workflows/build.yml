@@ -1,13 +1,15 @@
 name: Build
 on: [push, workflow_dispatch]
+
 jobs:
   build:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: geode-sdk/build-geode-mod@main
-        id: build
-      - uses: actions/upload-artifact@v4
+
+      - name: Build Geode Mod
+        uses: geode-sdk/build-geode-mod@main
         with:
-          name: mod
-          path: ${{ steps.build.outputs.build-output }}
+          sdk: latest
+          cli: latest
+          target: Windows
